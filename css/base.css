@@ -1,0 +1,227 @@
+/*[CR 2]. Arquivos CSS separados Criação de arquivos CSS separados,
+com base no uso e função de cada conjunto de estilizações. Sendo assim,
+seu projeto deve ter mais de um CSS. Para atender ao critério,
+organize o CSS de maneira lógica, separando-o em arquivos de acordo com o seu papel no site.
+Dica link: https: //tableless.com.br/6-estrategias-para-melhorar-a-organizacao-do-seu-css/
+*/
+/*
+[CR 4]. Uso de classes, seletores e combinadores CSS.
+Utilizar classes, seletores e combinadores CSS distintos.
+*/
+
+
+/* ESTILOS GERAIS */
+:root {
+    --background-color: white;
+    --text-color-primary: black;
+    --text-color-secundary: #333333;
+    --header-background: burlywood;
+    --header-text-color: black;
+    --footer-background: #333333;
+    --footer-title-color: #f4b183;
+    --footer-text-color: white;
+    --footer-social-icons: #444;
+    --button-background: #f4a261;
+    --button-text-color: white;
+    --button-hover-background: darkorange;
+}
+
+/*Global*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+    overflow-x: hidden;
+}
+
+main {
+    background-color: gainsboro;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--text-color-secundary);
+}
+
+.header__top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-background);
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.header__contact-info {
+    display: flex;
+    gap: 15px;
+}
+
+.header__contact-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5px;
+}
+
+.header__social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.header__social-link {
+    color: white;
+    text-decoration: none;
+}
+
+.header__social-link:hover {
+    color: var(--button-hover-background);
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color-primary);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header__nav-item {
+    margin: 0 1rem;
+}
+
+
+.header__nav-link {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header__nav-link:hover {
+    color: #f4a261;
+}
+
+.header__button {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header__button:hover {
+    background-color: var(--button-hover-background);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__column {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer__title {
+    color: var(--footer-title-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__list-item {
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--footer-text-color);
+}
+
+.footer__link:hover {
+    color: var(--button-hover-background);
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 2.3rem;
+
+    color: white;
+    text-decoration: none;
+}
+
+.footer__social-link:hover {
+    color: var(--footer-title-color);
+}
+
+.footer__bottom {
+    margin-top: 20px;
+}
+
+.footer__text {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
