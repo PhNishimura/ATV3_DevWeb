@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - ConcordSupplies</title>
+    <title>Carrinho - ConcordSupplies</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layouts.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/cart.css">
     <script src="../scripts/theme-switcher.js" defer></script>
+    <script src="../scripts/cart.js" defer></script>
 </head>
 <body class="theme-light">
     <header class="header">
@@ -35,7 +37,6 @@
                 <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contato</a></li>
                 <li class="header__nav-item"><a href="register.html" class="header__nav-link">Cadastro</a></li>
             </ul>
-            <!-- AINDA NAO ESTA LOGANDO -->
             <div class="header__cart-container">
                 <a href="cart.html" class="header__cart-link">
                     <i class="fas fa-shopping-cart"></i>
@@ -44,31 +45,42 @@
                 <a href="login.html" class="header__button">Login</a>
                 <button class="header__button" id="theme-toggle">Alternar Tema</button>
             </div>
-
         </nav>
     </header>
-    <main class="main">
-        <section class="about">
-            <div class="about__image">
-                <img src="../imagens/aboutUs.png" alt="Equipe Concord Supplies" class="about__img">
+    <main>
+        <section class="cart-title-container">
+            <h1>Seu Carrinho</h1>
+            <p>Revise seus itens antes de finalizar a compra</p>
+        </section>
+        
+        <section class="cart-container">
+            <div class="cart-items">
+                <!-- Itens do carrinho serão adicionados dinamicamente -->
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                    <a href="products.html" class="button">Continuar Comprando</a>
+                </div>
             </div>
-            <div class="about__content">
-                <h1 class="about__title">Sobre a Concord Supplies</h1>
-                <p class="about__text">
-                    A Concord Supplies é uma empresa dedicada a fornecer produtos de qualidade para o seu escritório e organização.
-                    Com uma vasta gama de produtos e um compromisso com a excelência, estamos aqui para garantir que você tenha tudo o que precisa para o seu dia a dia.
-                </p>
-                <h2 class="about__subtitle">Nossa Missão</h2>
-                <p class="about__text">
-                    Nossa missão é oferecer produtos de alta qualidade, acessíveis e inovadores, sempre priorizando a satisfação do cliente e o compromisso com a sustentabilidade e responsabilidade social.
-                </p>
-                <h2 class="about__subtitle">Nossos Valores</h2>
-                <ul class="about__list">
-                    <li class="about__item">Qualidade: Compromisso com produtos de alta qualidade.</li>
-                    <li class="about__item">Inovação: Buscamos soluções inovadoras para o mercado de escritório.</li>
-                    <li class="about__item">Sustentabilidade: Respeito ao meio ambiente em todas as nossas operações.</li>
-                    <li class="about__item">Ética: Atuamos com transparência e integridade em todas as nossas ações.</li>
-                </ul>
+            
+            <div class="cart-summary">
+                <h3>Resumo do Pedido</h3>
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span class="shipping">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="total-price">R$ 0,00</span>
+                    </div>
+                </div>
+                <button class="checkout-button">Finalizar Compra</button>
+                <a href="products.html" class="continue-shopping">Continuar Comprando</a>
             </div>
         </section>
     </main>
@@ -78,17 +90,16 @@
                 <h3 class="footer__title">Links</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
-                    <li class="footer__list-item"><a href="../paginas/products.html" class="footer__link">Produtos</a></li>
-                    <li class="footer__list-item"><a href="../paginas/about.html" class="footer__link">Sobre Nós</a></li>
-                    <li class="footer__list-item"><a href="../paginas/contact.html" class="footer__link">Contato</a></li>
+                    <li class="footer__list-item"><a href="products.html" class="footer__link">Produtos</a></li>
+                    <li class="footer__list-item"><a href="about.html" class="footer__link">Sobre Nós</a></li>
+                    <li class="footer__list-item"><a href="contact.html" class="footer__link">Contato</a></li>
                 </ul>
             </div>
             <div class="footer__column">
                 <h3 class="footer__title">Contato</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">+55-11-4034-7800</li>
-                    <li class="footer__list-item"><a href="../paginas/contact.html"
-                            class="footer__link">websupport@gmail.com</a></li>
+                    <li class="footer__list-item"><a href="contact.html" class="footer__link">websupport@gmail.com</a></li>
                     <li class="footer__list-item">Endereço: Av. Maj. Fernando Valle, 2013</li>
                     <li class="footer__list-item">Bragança Paulista, São Paulo, Brasil</li>
                 </ul>
@@ -109,4 +120,3 @@
     </footer>
 </body>
 </html>
-
