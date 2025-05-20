@@ -616,6 +616,28 @@ footer {
     font-weight: bold;
 }
 
+.checkout-button {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+
+
 @media (max-width: 768px) {
     .cart-container {
         flex-direction: column;
