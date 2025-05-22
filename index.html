@@ -1,147 +1,15 @@
-<!--      IFSP - Campus Bragança Paulista
-
-                Desenvolvimento WEB
-
-    Cauê Pacheco Palma              BP3032388
-    Eduardo Ferreira Silva          BP3032442
-    Luca Vianna Martins Silveira    BP3032469 
-    Mauro Sérgio JAMRL Pereira      BP3032116 
-    Pedro Henrique N Bachaalani     BP3032884
-
-    
-            Projeto de WebSite
-
--->
-<!--
-[CR1]. Estrutura de diretórios do website.
-Os arquivos do website devem estar organizados em diretórios específicos, de acordo com seu tipo.
-Para atender ao critério, utilize a estrutura de diretórios que divide o site em:
-- imagens
-- css
-- scripts
-- paginas
-- index.html
-Obs: Todo .html que não for o index, deve ficar dentro do diretório: paginas.
--->
-<!--
-[CR 5]. Conformidade com o Design. 
-Aplicar o estilo definido pelo design escolhido como referência nas 5 páginas do website.
-É importante utilizar recursos como imagens e fontes (modelo.png).
-- baseado: https://www.jdomni.com/ecommerce-themes/office-supplies-and-stationery-dealer-template
--->
-<!--
-[CR 8]. Recursos de HTML semântico e Javascript.
-Uso de tags semânticas, Javascript, eventos e formulários.
-Para atender ao critério, o site deve utilizar:
-- TAGS SEMÂNTICAS: <main>, <header>, <article>, <section>, <nav>, <hgroup>, <figure>, <aside>, <footer>;
-- Javascript (funções, Date, strings, Array, DOM);
-- Eventos (click, submit, focus, keydown/keyup e input);
-- Formulários: Enviar por e-mail os dados com https://formsubmit.co/
-.
--->
-
+```html
 <!DOCTYPE html>
-<html lang="pt-br">                                             <!--HTML: HEAD,BODY-->
-<head>                                                              <!--HEAD: Meta,Title,Link-->
-    <meta charset="UTF-8">                                              <!--Meta-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConcordSupplies</title>                                      <!--Title-->
+    <title>ConcordSupplies</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css">                         <!--Link(css)-->
-    <link rel="stylesheet" href="css/layouts.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <script src="scripts/theme-switcher.js" defer></script>             <!--Script(js)-->
-</head>                                                             <!--/HEAD-->
-<body class="theme-light">                                          <!--BODY: Header,Main,Footer-->
-    <header class="header">                                             <!--Header-->
-        <div class="header__top-bar">
-            <div class="header__contact-info">
-                <span class="header__contact-item">📞 +55-11-4034-7800</span>
-                <span class="header__contact-item">📧 websupport@gmail.com</span>
-            </div>
-            <div class="header__social-icons">
-                <a href="https://www.facebook.com/" target="_blank" title="Facebook" class="header__social-link"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram" class="header__social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://br.linkedin.com/" target="_blank" title="Linkedin" class="header__social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://x.com/i/flow/login" target="_blank" title="X" class="header__social-link"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-        </div>
-<!--
-[CR 3]. Elabore 4 páginas para navegação. 
-No mínimo 4 páginas, sem contar a index.html. As páginas devem ser acessíveis por links.         
--->
-        <nav class="header__nav">                                           <!--Nav-->
-            <h1 class="header__logo">ConcordSupplies</h1>
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Home</a></li>
-                <li class="header__nav-item"><a href="paginas/products.html" class="header__nav-link">Produtos</a></li>
-                <li class="header__nav-item"><a href="paginas/about.html" class="header__nav-link">Sobre Nós</a></li>
-                <li class="header__nav-item"><a href="paginas/contact.html" class="header__nav-link">Contato</a></li>
-                <li class="header__nav-item"><a href="paginas/register.html" class="header__nav-link">Cadastro</a></li>
-            </ul>
-            <!-- AINDA NAO ESTA LOGANDO -->
-            <div class="header__cart-container">
-                <a href="paginas/cart.html" class="header__cart-link">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="header__cart-count">0</span>
-                </a>
-                <a href="./paginas/login.html" class="header__button">Login</a>
-                <button class="header__button" id="theme-toggle">Alternar Tema</button>
-            </div>
-        </nav>
-            
-
-            <!--
-[CR 7]. Mudança de esquema de cores.
-Botão para alternância de esquema de cores do website. 
--->
-            
-        </nav>                                                              <!--/Nav-->
-    </header>                                                           <!--/Header-->
-    <main>                                                              <!--Main-->
-        <section class="banner">
-            <h1 class="banner__title">All Office Products</h1>
-            <h2 class="banner__subtitle">Under One Roof</h2>
-            <p class="banner__text">Explore a variedade de materiais de escritório.</p>
-        </section>
-    </main>                                                             <!--/Main-->
-    <footer class="footer">                                             <!--Footer-->
-        <div class="footer__container">
-            <div class="footer__column">                                     <!-- Footer: Links Rápidos -->
-                <h3 class="footer__title">Links</h3>
-                <ul class="footer__list">
-                    <li class="footer__list-item"><a href="index.html" class="footer__link">Home</a></li>
-                    <li class="footer__list-item"><a href="paginas/products.html" class="footer__link">Produtos</a></li>
-                    <li class="footer__list-item"><a href="paginas/about.html" class="footer__link">Sobre Nós</a></li>
-                    <li class="footer__list-item"><a href="paginas/contact.html" class="footer__link">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">                                    <!-- Footer: Contato -->
-                <h3 class="footer__title">Contato</h3>
-                <ul class="footer__list">
-                    <li class="footer__list-item">+55-11-4034-7800</li>
-                    <li class="footer__list-item"><a href="paginas/contact.html" class="footer__link">websupport@gmail.com</a></li>
-                    <li class="footer__list-item">Endereço: Av. Maj. Fernando Valle, 2013</li>
-                    <li class="footer__list-item">Bragança Paulista, São Paulo, Brasil</li>
-                </ul>
-            </div>
-            <div class="footer__column">                                    <!-- Footer: Media Social -->
-                <h3 class="footer__title">Siga-nos</h3>
-                <div class="footer__social-icons">
-                    <a href="https://www.facebook.com/" target="_blank" title="Facebook" class="footer__social-link"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" title="Instagram" class="footer__social-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://br.linkedin.com/" target="_blank" title="Linkedin" class="footer__social-link"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/i/flow/login" target="_blank" title="X" class="footer__social-link"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">                                        <!-- Footer: Media Social -->
-            <p class="footer__text">© Copyright 2024 - ConcordSupplies. Todos os direitos reservados.</p>
-        </div>
-    </footer>                                                           <!--/Footer-->
-</body>                                                             <!--/BODY-->
-</html>                                                         <!--/HTML-->
-
-
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+```
